@@ -1,2 +1,2 @@
 #!/bin/bash
-/var/packages/libimobiledevice/target/mounting.sh &
+/var/packages/synoios/target/mounting.sh &

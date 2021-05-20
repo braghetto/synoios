@@ -40,6 +40,7 @@ After installation, idevice*, ifuse, usbmuxd are available in command-line.
 
 ### Remove toolkit
 `$ chroot /toolkit/build_env/ds.x64-6.2 umount /proc`
+
 `$ rm -rf /toolkit/build_env/ds.x64-6.2`
 
 

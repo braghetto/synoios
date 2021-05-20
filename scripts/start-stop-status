@@ -1,0 +1,40 @@
+#!/bin/sh
+
+export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/var/packages/synoios/target/lib"
+
+case $1 in
+	start)
+		### Start this package.
+		ln -sf $SYNOPKG_PKGDEST/bin/usbmuxd /usr/local/bin/
+		synoshare --add AppleDevice "for iPhone/iPad" /$SYNOPKG_PKGDEST_VOL/AppleDevice "" "" "@users" 1 0
+		touch $SYNOPKG_PKGDEST_VOL/AppleDevice/Please-Connect-to-Your-Device-First
+		usbmuxd
+		cp $SYNOPKG_PKGDEST/39-libimobiledevice.rules /usr/lib/udev/rules.d/
+		udevadm control --reload-rules
+		exit 0
+	;;
+	stop)
+		### Stop this package.
+		fusermount -u $SYNOPKG_PKGDEST_VOL/AppleDevice
+		synoshare --del FALSE AppleDevice
+		killall usbmuxd
+		rm -f /usr/lib/udev/rules.d/39-libimobiledevice.rules 
+		udevadm control --reload-rules
+		rm -f /usr/local/bin/usbmuxd
+		exit 0
+	;;
+	status)
+		### Check package alive.
+		if [ -h "/usr/local/bin/usbmuxd" ]; then
+			exit 0
+		else
+			exit 1
+		fi
+	;;
+	killall)
+        ;;
+	log)
+		exit 0
+	;;
+esac
+

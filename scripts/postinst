@@ -1,0 +1,8 @@
+#!/bin/sh
+
+python -c "\
+	data = open('$SYNOPKG_PKGDEST/mounting.sh').read(); \
+	data = data.replace('volume1', '$SYNOPKG_PKGDEST_VOL'); \
+	open('$SYNOPKG_PKGDEST/mounting.sh', 'w').write(data)"
+
+exit 0

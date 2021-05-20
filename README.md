@@ -13,6 +13,7 @@ This package was tested using a Synology DS1515+ running DSM 6.2.4-25556 and a i
 * Python3
 * Docker (libimobiledevice is built inner a container.)
 * Synology Open Source Toolkit (for repacking them into a NAS package)
+* Root shell
 
 ## How to Build
 

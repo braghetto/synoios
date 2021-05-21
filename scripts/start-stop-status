@@ -6,8 +6,8 @@ case $1 in
 	start)
 		### Start this package.
 		ln -sf $SYNOPKG_PKGDEST/bin/usbmuxd /usr/local/bin/
-		synoshare --add AppleDevice "for iPhone/iPad" /$SYNOPKG_PKGDEST_VOL/AppleDevice "" "" "@users" 1 0
-		touch $SYNOPKG_PKGDEST_VOL/AppleDevice/Please-Connect-to-Your-Device-First
+		synoshare --add AppleDevice "for iOS devices" /$SYNOPKG_PKGDEST_VOL/AppleDevice "" "" "@users" 1 0
+		touch $SYNOPKG_PKGDEST_VOL/AppleDevice/Connect-Apple-Device-to-Usb
 		usbmuxd
 		cp $SYNOPKG_PKGDEST/39-libimobiledevice.rules /usr/lib/udev/rules.d/
 		udevadm control --reload-rules

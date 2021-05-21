@@ -7,17 +7,17 @@ sleep 5;
 
 mount | grep AppleDevice
 if [ $? -ne 0 ]; then
-	ifuse -o nonempty -o allow_other /volume1/AppleDevice && /usr/syno/bin/synodsmnotify @users AppleDevice "A device is mounted successfully. Please reopen FileStation."
+	ifuse -o nonempty -o allow_other /volume1/AppleDevice && /usr/syno/bin/synodsmnotify @users AppleDevice "iOS device mounted successfully."
 fi
 
 sleep 20;
 mount | grep AppleDevice
 if [ $? -ne 0 ]; then
-	ifuse -o nonempty -o allow_other /volume1/AppleDevice && /usr/syno/bin/synodsmnotify @users AppleDevice "A device is mounted successfully. Please reopen FileStation."
+	ifuse -o nonempty -o allow_other /volume1/AppleDevice && /usr/syno/bin/synodsmnotify @users AppleDevice "iOS device mounted successfully."
 fi
 
 sleep 20;
 mount | grep AppleDevice
 if [ $? -ne 0 ]; then
-	ifuse -o nonempty -o allow_other /volume1/AppleDevice && /usr/syno/bin/synodsmnotify @users AppleDevice "A device is mounted successfully. Please reopen FileStation."
+	ifuse -o nonempty -o allow_other /volume1/AppleDevice && /usr/syno/bin/synodsmnotify @users AppleDevice "iOS device mounted successfully."
 fi

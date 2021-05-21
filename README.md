@@ -6,6 +6,8 @@ After installation the package must be in the running state,
 then connect your iOS device into usb.
 Now you should see your device files mounted in AppleDevice share.
 
+If you just want to install and use this app on your Synology, just follow [these instructions](https://arthur.mobi/posts/synoios/). 
+
 This package was tested using a Synology DS1515+ running DSM 6.2.4-25556 and a iPhone 11.
 
 

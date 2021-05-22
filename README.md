@@ -8,8 +8,6 @@ Now you should see your device files mounted in AppleDevice share.
 
 If you only want to install and use this app on your Synology, just follow [these instructions](https://arthur.mobi/posts/synoios/). 
 
-This package was tested using a Synology DS1515+ running DSM 6.2.4-25556 and a iPhone 11 running iOS 14.5.1.
-This package will not be compatible with DSM 7.
 
 ## Compatibility 
 * Synology DSM 6.2
